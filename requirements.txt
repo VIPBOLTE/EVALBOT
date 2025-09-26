@@ -1,0 +1,14 @@
+pymongo[srv]
+pymongo==4.2.0
+dnspython==2.2.1
+pillow
+asyncio
+flask
+future==1.0.0
+motor 
+pillow==10.3.0
+pyrogram==2.0.106
+python-telegram-bot==21.1.1
+requests
+tgcrypto
+python-dotenv
