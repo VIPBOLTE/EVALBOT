@@ -22,14 +22,14 @@ class Config:
         return value
 
     # Required Bot Configurations
-    API_ID = _get_env_var.__func__("API_ID", None, is_int=True)
-    API_HASH = _get_env_var.__func__("API_HASH", None)
+    API_ID = _get_env_var.__func__("API_ID", "22451491", is_int=True)
+    API_HASH = _get_env_var.__func__("API_HASH", "28e74942125f7e4968398ea651cd417b")
     BOT_TOKEN = _get_env_var.__func__("BOT_TOKEN", None)
-    OWNER_USERNAME = _get_env_var.__func__("OWNER_USERNAME", "Deletedaccounto11")
+    OWNER_USERNAME = _get_env_var.__func__("OWNER_USERNAME", "MUMMA_S_BOY")
     BOT_USERNAME = _get_env_var.__func__("BOT_USERNAME", "Seal_Your_Waifu_Bot")
-    MONGO_DB_URI = _get_env_var.__func__("MONGO_DB_URI", None)
+    MONGO_DB_URI = _get_env_var.__func__("MONGO_DB_URI", "")
     LOGGER_ID = _get_env_var.__func__("LOGGER_ID", None, is_int=True)
-    OWNER_ID = _get_env_var.__func__("OWNER_ID", None, is_int=True)
+    OWNER_ID = _get_env_var.__func__("OWNER_ID", "", is_int=True)
 
     # Optional / Heroku-related
     HEROKU_APP_NAME = _get_env_var.__func__("HEROKU_APP_NAME", None)
