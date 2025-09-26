@@ -1,37 +1,45 @@
 import re
+import sys
 from os import getenv
 from dotenv import load_dotenv
-from pyrogram import filters
-import sys
 
 load_dotenv()
 
-# Function to validate environment variables
-def check_env_var(var_name, default_value, is_int=False):
-    value = getenv(var_name, default_value)
-    if is_int:
-        try:
-            return int(value)
-        except ValueError:
-            print(f"ERROR: {var_name} should be an integer!")
+class Config:
+    @staticmethod
+    def _get_env_var(var_name: str, default=None, is_int=False):
+        value = getenv(var_name, default)
+        if value is None:
+            print(f"ERROR: Environment variable '{var_name}' is not set and no default was provided.")
             sys.exit(1)
-    return value
 
-API_ID = check_env_var("API_ID", "28477444", True)  # Ensure it's an integer
-API_HASH = check_env_var("API_HASH", "7cd9caeb99fdf37a5cf12b180e4b1b0b")
-BOT_TOKEN = check_env_var("BOT_TOKEN", "6902253047:AAGCMdIPTLp3kNi5n_pMfiWnBroP3Rh2xYY")
-OWNER_USERNAME = check_env_var("OWNER_USERNAME", "Deletedaccounto11")
-BOT_USERNAME = check_env_var("BOT_USERNAME", "Seal_Your_Waifu_Bot")
-MONGO_DB_URI = check_env_var("MONGO_DB_URI", "mongodb+srv://riyu:riyu@cluster0.kduyo99.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
-LOGGER_ID = check_env_var("LOGGER_ID", "-1002126989582", True)
-OWNER_ID = check_env_var("OWNER_ID", "5595153270", True)
+        if is_int:
+            try:
+                return int(value)
+            except ValueError:
+                print(f"ERROR: Environment variable '{var_name}' should be an integer.")
+                sys.exit(1)
+        return value
 
-# Heroku-related variables
-HEROKU_APP_NAME = check_env_var("HEROKU_APP_NAME", None)
-HEROKU_API_KEY = check_env_var("HEROKU_API_KEY", None)
+    # Required Bot Configurations
+    API_ID = _get_env_var.__func__("API_ID", None, is_int=True)
+    API_HASH = _get_env_var.__func__("API_HASH", None)
+    BOT_TOKEN = _get_env_var.__func__("BOT_TOKEN", None)
+    OWNER_USERNAME = _get_env_var.__func__("OWNER_USERNAME", "Deletedaccounto11")
+    BOT_USERNAME = _get_env_var.__func__("BOT_USERNAME", "Seal_Your_Waifu_Bot")
+    MONGO_DB_URI = _get_env_var.__func__("MONGO_DB_URI", None)
+    LOGGER_ID = _get_env_var.__func__("LOGGER_ID", None, is_int=True)
+    OWNER_ID = _get_env_var.__func__("OWNER_ID", None, is_int=True)
 
-UPSTREAM_REPO = check_env_var("UPSTREAM_REPO", "https://github.com/VIPBOLTE/Sanatan-cheat-bot")
-UPSTREAM_BRANCH = check_env_var("UPSTREAM_BRANCH", "main")
-GIT_TOKEN = check_env_var("GIT_TOKEN", None)
-SUPPORT_CHANNEL = check_env_var("SUPPORT_CHANNEL", "channelz_k")
-SUPPORT_CHAT = check_env_var("SUPPORT_CHAT", "LOVING_SOCIETY")
+    # Optional / Heroku-related
+    HEROKU_APP_NAME = _get_env_var.__func__("HEROKU_APP_NAME", None)
+    HEROKU_API_KEY = _get_env_var.__func__("HEROKU_API_KEY", None)
+
+    # Git Upstream
+    UPSTREAM_REPO = _get_env_var.__func__("UPSTREAM_REPO", "https://github.com/VIPBOLTE/Sanatan-cheat-bot")
+    UPSTREAM_BRANCH = _get_env_var.__func__("UPSTREAM_BRANCH", "main")
+    GIT_TOKEN = _get_env_var.__func__("GIT_TOKEN", None)
+
+    # Support
+    SUPPORT_CHANNEL = _get_env_var.__func__("SUPPORT_CHANNEL", "channelz_k")
+    SUPPORT_CHAT = _get_env_var.__func__("SUPPORT_CHAT", "LOVING_SOCIETY")
