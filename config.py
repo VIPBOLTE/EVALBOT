@@ -36,7 +36,7 @@ class Config:
     HEROKU_API_KEY = _get_env_var.__func__("HEROKU_API_KEY", None)
 
     # Git Upstream
-    UPSTREAM_REPO = _get_env_var.__func__("UPSTREAM_REPO", "https://github.com/VIPBOLTE/Sanatan-cheat-bot")
+    UPSTREAM_REPO = _get_env_var.__func__("UPSTREAM_REPO", "https://github.com/VIPBOLTE/EVALBOT")
     UPSTREAM_BRANCH = _get_env_var.__func__("UPSTREAM_BRANCH", "main")
     GIT_TOKEN = _get_env_var.__func__("GIT_TOKEN", None)
 
