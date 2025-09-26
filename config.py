@@ -27,7 +27,7 @@ class Config:
     BOT_TOKEN = _get_env_var.__func__("BOT_TOKEN", None)
     OWNER_USERNAME = _get_env_var.__func__("OWNER_USERNAME", "MUMMA_S_BOY")
     BOT_USERNAME = _get_env_var.__func__("BOT_USERNAME", "Seal_Your_Waifu_Bot")
-    MONGO_DB_URI = _get_env_var.__func__("MONGO_DB_URI", "")
+    MONGO_DB_URI = _get_env_var.__func__("MONGO_DB_URI", "mongodb+srv://yash:shivanshudeo@yk.6bvcjqp.mongodb.net/?retryWrites=true&w=majority&appName=yk")
     LOGGER_ID = _get_env_var.__func__("LOGGER_ID", None, is_int=True)
     OWNER_ID = _get_env_var.__func__("OWNER_ID", "", is_int=True)
 
