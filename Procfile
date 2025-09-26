@@ -1,1 +1,1 @@
-worker: python3 -m Sanatan
+worker: python3 -m INSTA
