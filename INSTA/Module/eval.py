@@ -112,6 +112,3 @@ async def shellrunner(_, message: Message):
     else:
         await edit_or_reply(message, text=f"<b>OUTPUT :</b>\n<pre>{output}</pre>")
 
-
-if __name__ == "__main__":
-    app.run()
