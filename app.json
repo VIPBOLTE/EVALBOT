@@ -1,0 +1,83 @@
+{
+  "name": "Eval Telegram Bot",
+  "description": "Telegram Eval / Compiler Bot built with Pyrogram",
+  "repository": "https://github.com/VIPBOLTE/EVALBOT",
+  "keywords": [
+    "telegram",
+    "bot",
+    "pyrogram",
+    "eval",
+    "compiler"
+  ],
+  "env": {
+    "API_ID": {
+      "description": "Telegram API ID",
+      "required": true
+    },
+    "API_HASH": {
+      "description": "Telegram API HASH",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Telegram Bot Token",
+      "required": true
+    },
+    "OWNER_ID": {
+      "description": "Telegram Owner User ID",
+      "required": true
+    },
+    "LOGGER_ID": {
+      "description": "Log Channel / Group ID",
+      "required": true
+    },
+    "MONGO_DB_URI": {
+      "description": "MongoDB connection string",
+      "required": true
+    },
+    "OWNER_USERNAME": {
+      "description": "Owner username (without @)",
+      "required": false
+    },
+    "BOT_USERNAME": {
+      "description": "Bot username (without @)",
+      "required": false
+    },
+    "SUPPORT_CHANNEL": {
+      "description": "Support channel username",
+      "required": false
+    },
+    "SUPPORT_CHAT": {
+      "description": "Support chat username",
+      "required": false
+    },
+    "UPSTREAM_REPO": {
+      "description": "GitHub repository URL",
+      "value": "https://github.com/VIPBOLTE/EVALBOT",
+      "required": false
+    },
+    "UPSTREAM_BRANCH": {
+      "description": "Git branch name",
+      "value": "main",
+      "required": false
+    },
+    "GIT_TOKEN": {
+      "description": "GitHub token (only for private repos)",
+      "required": false
+    },
+    "HEROKU_APP_NAME": {
+      "description": "Heroku app name",
+      "required": false
+    },
+    "HEROKU_API_KEY": {
+      "description": "Heroku API key",
+      "required": false
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1
+    }
+  },
+  "stack": "container"
+}
+
