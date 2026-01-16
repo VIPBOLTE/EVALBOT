@@ -3,7 +3,6 @@ import requests
 from urllib.parse import quote_plus
 from pyrogram import filters
 from INSTA import app
-from config import Config.LOGGER_ID
 
 # Primary and backup Instagram downloader APIs
 INSTAGRAM_API = "https://social-dl.hazex.workers.dev/?url="
