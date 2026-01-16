@@ -7,7 +7,7 @@ from INSTA.Module import ALL_MODULES
 bot = Flask(__name__)
 def load_modules():
     for all_module in ALL_MODULES:
-        importlib.import_module("Sanatan.Module." + all_module)
+        importlib.import_module("INSTA.Module." + all_module)
     LOGGER.info("All modules loaded successfully.")
 @bot.route('/')
 def home():
