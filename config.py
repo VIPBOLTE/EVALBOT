@@ -38,7 +38,7 @@ class Config:
     # Git Upstream
     UPSTREAM_REPO = _get_env_var.__func__("UPSTREAM_REPO", "https://github.com/VIPBOLTE/EVALBOT")
     UPSTREAM_BRANCH = _get_env_var.__func__("UPSTREAM_BRANCH", "main")
-    GIT_TOKEN = _get_env_var.__func__("GIT_TOKEN", None)
+   # GIT_TOKEN = _get_env_var.__func__("GIT_TOKEN", None)
 
     # Support
     SUPPORT_CHANNEL = _get_env_var.__func__("SUPPORT_CHANNEL", "channelz_k")
