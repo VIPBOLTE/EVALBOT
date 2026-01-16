@@ -24,7 +24,7 @@ class Config:
     # Required Bot Configurations
     API_ID = _get_env_var.__func__("API_ID", "22451491", is_int=True)
     API_HASH = _get_env_var.__func__("API_HASH", "28e74942125f7e4968398ea651cd417b")
-    BOT_TOKEN = _get_env_var.__func__("BOT_TOKEN", "7617600575:AAHGWup46-2ELI_oisPtHc10OJXgdX2edgE")
+    BOT_TOKEN = _get_env_var.__func__("BOT_TOKEN", "7606007043:AAFq79oQVRwM0qZSL-_Xodp7vz16oi1buFs")
     OWNER_USERNAME = _get_env_var.__func__("OWNER_USERNAME", "MUMMA_S_BOY")
     BOT_USERNAME = _get_env_var.__func__("BOT_USERNAME", "Seal_Your_Waifu_Bot")
     MONGO_DB_URI = _get_env_var.__func__("MONGO_DB_URI", "mongodb+srv://yash:shivanshudeo@yk.6bvcjqp.mongodb.net/?retryWrites=true&w=majority&appName=yk")
